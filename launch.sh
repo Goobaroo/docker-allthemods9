@@ -12,10 +12,10 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'Server-Files-0.1.5.zip' ]]; then
+if ! [[ -f 'Server-Files-0.1.4.zip' ]]; then
 	rm -fr defaultconfigs config kubejs libraries mods Simple.zip forge*
-	curl -Lo 'Server-Files-0.1.5.zip' 'https://edge.forgecdn.net/files/4761/21/Server-Files-0.1.5.zip' || exit 9
-	unzip -u -o 'Server-Files-0.1.5.zip' -d /data
+	curl -Lo 'Server-Files-0.1.4.zip' 'https://edge.forgecdn.net/files/4760/616/Server-Files-0.1.4.zip' || exit 9
+	unzip -u -o 'Server-Files-0.1.4.zip' -d /data
 	DIR_TEST=$(find . -type d -maxdepth 1 | tail -1 | sed 's/^.\{2\}//g')
 	if [[ $(find . -type d -maxdepth 1 | wc -l) -gt 1 ]]; then
 		cd "${DIR_TEST}"
