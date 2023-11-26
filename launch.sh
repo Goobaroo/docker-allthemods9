@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.1.3
+FORGE_VERSION=1.20.1-47.2.0
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
@@ -12,10 +12,10 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'Server-Files-0.2.22.zip' ]]; then
+if ! [[ -f 'Server-Files-0.2.23.zip' ]]; then
 	rm -fr defaultconfigs config kubejs libraries mods Simple.zip forge*
-	curl -Lo 'Server-Files-0.2.22.zip' 'https://edge.forgecdn.net/files/4898/564/Server-Files-0.2.22.zip' || exit 9
-	unzip -u -o 'Server-Files-0.2.22.zip' -d /data
+	curl -Lo 'Server-Files-0.2.23.zip' 'https://edge.forgecdn.net/files/4901/333/Server-Files-0.2.23.zip' || exit 9
+	unzip -u -o 'Server-Files-0.2.23.zip' -d /data
 	DIR_TEST=$(find . -type d -maxdepth 1 | tail -1 | sed 's/^.\{2\}//g')
 	if [[ $(find . -type d -maxdepth 1 | wc -l) -gt 1 ]]; then
 		cd "${DIR_TEST}"
