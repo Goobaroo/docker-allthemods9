@@ -24,8 +24,17 @@ if ! [[ -f 'Server-Files-0.2.61.zip' ]]; then
 		cd /data
 		rm -fr "$DIR_TEST"
 	fi
-if [[ -f 'run.sh' ]]; then
+        curl -Lo mohist-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/${MC_VERSION}/builds/latest/download
+ 	echo "java -jar mohist-${FORGE_VERSION}-installer.jar" > run.sh
+
+
+ 
     if [[ -n "$JVM_OPTS" ]]; then
+	sed -i '/-Xm[s,x]/d' user_jvm_args.txt
+	for j in ${JVM_OPTS}; do sed -i '$a\'$j'' user_jvm_args.txt; done
+fi
+
+if [[ -n "$JVM_OPTS" ]]; then
 	sed -i '/-Xm[s,x]/d' user_jvm_args.txt
 	for j in ${JVM_OPTS}; do sed -i '$a\'$j'' user_jvm_args.txt; done
 fi
@@ -43,10 +52,3 @@ sed -i 's/server-port.*/server-port=25565/g' server.properties
 chmod 755 run.sh
 
 ./run.sh
-else 
-    curl -Lo mohist-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/${MC_VERSION}/builds/latest/download
-	java -jar -Xmx4G mohist-${FORGE_VERSION}-installer.jar
- 	echo "java -jar mohist-${FORGE_VERSION}-installer.jar" > run.sh
-fi
-
-fi
