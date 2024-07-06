@@ -29,10 +29,7 @@ if ! [[ -f 'Server-Files-0.2.61.zip' ]]; then
 
 
  
-    if [[ -n "$JVM_OPTS" ]]; then
-	sed -i '/-Xm[s,x]/d' user_jvm_args.txt
-	for j in ${JVM_OPTS}; do sed -i '$a\'$j'' user_jvm_args.txt; done
-fi
+ fi
 
 if [[ -n "$JVM_OPTS" ]]; then
 	sed -i '/-Xm[s,x]/d' user_jvm_args.txt
