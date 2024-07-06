@@ -24,7 +24,7 @@ if ! [[ -f 'Server-Files-0.2.61.zip' ]]; then
 		rm -fr "$DIR_TEST"
 	fi
 	curl -Lo forge-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/1.20.1/builds/741/mohist-1.20.1-741-server.jar
-	java -jar forge-${FORGE_VERSION}-installer.jar --installServer
+	java -jar -Xmx4G downloaded-jar-file.jar
 fi
 
 if [[ -n "$JVM_OPTS" ]]; then
