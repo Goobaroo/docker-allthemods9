@@ -1,5 +1,7 @@
 # [All the Mods 9-0.2.61](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9) on Curseforge
 
+Modified to run with MohistMC jar
+
 <!-- toc -->
 
 - [Description](#description)
