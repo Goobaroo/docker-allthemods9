@@ -3,6 +3,7 @@
 set -x
 
 FORGE_VERSION=1.20.1-47.3.5
+MC_VERSION=1.20.1
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
@@ -23,8 +24,9 @@ if ! [[ -f 'Server-Files-0.2.61.zip' ]]; then
 		cd /data
 		rm -fr "$DIR_TEST"
 	fi
-	curl -Lo forge-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/1.20.1/builds/741/mohist-1.20.1-741-server.jar
-	java -jar -Xmx4G forge-${FORGE_VERSION}-installer.jar
+	curl -Lo mohist-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/${MC_VERSION}/builds/latest/download
+	java -jar -Xmx4G mohist-${FORGE_VERSION}-installer.jar --installServer
+ 	echo 'java -jar mohist-${FORGE_VERSION}-installer.jar' > run.sh
 fi
 
 if [[ -n "$JVM_OPTS" ]]; then
