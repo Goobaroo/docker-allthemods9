@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.2.20
+FORGE_VERSION=1.20.1-47.3.5
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
@@ -23,7 +23,7 @@ if ! [[ -f 'Server-Files-0.2.61.zip' ]]; then
 		cd /data
 		rm -fr "$DIR_TEST"
 	fi
-	curl -Lo forge-${FORGE_VERSION}-installer.jar http://files.minecraftforge.net/maven/net/minecraftforge/forge/$FORGE_VERSION/forge-$FORGE_VERSION-installer.jar
+	curl -Lo forge-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/1.20.1/builds/741/mohist-1.20.1-741-server.jar
 	java -jar forge-${FORGE_VERSION}-installer.jar --installServer
 fi
 
