@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.2.20
+FORGE_VERSION=1.20.1-47.3.0
 cd /data
 
 if ! [[ "$EULA" = "false" ]]; then
