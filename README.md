@@ -1,4 +1,4 @@
-# [All the Mods 9-0.2.61](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9) on Curseforge
+# [All the Mods 10-1.15.0]([https://www.curseforge.com/minecraft/modpacks/all-the-mods-9](https://www.curseforge.com/minecraft/modpacks/all-the-mods-10)) on Curseforge
 
 <!-- toc -->
 
