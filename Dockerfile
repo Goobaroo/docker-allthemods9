@@ -1,6 +1,6 @@
 # syntax=docker/dockerfile:1
 
-FROM openjdk:17-buster
+FROM openjdk:21-buster
 
 LABEL version="1.15.0"
 
