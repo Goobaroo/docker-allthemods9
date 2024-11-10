@@ -1,4 +1,4 @@
-# [All the Mods 9-0.3.3a](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9) on Curseforge
+# [All the Mods 9-0.3.0](https://www.curseforge.com/minecraft/modpacks/all-the-mods-9) on Curseforge
 
 Modified to run with MohistMC jar
 
