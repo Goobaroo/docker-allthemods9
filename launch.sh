@@ -13,7 +13,7 @@ else
 	exit 99
 fi
 
-if ! [[ -f 'Server-Files-0.3.0.zip' ]]; then
+if ! [[ -f 'Server-Files-1.0.3.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu Simple.zip forge*
 	curl -Lo 'Server-Files-1.0.3.zip' 'https://edge.forgecdn.net/files/6045/528/Server-Files-1.0.3.zip' || exit 9
 	unzip -u -o 'Server-Files-1.0.3.zip' -d /data
