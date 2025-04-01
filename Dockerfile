@@ -2,9 +2,9 @@
 
 FROM openjdk:17-buster
 
-LABEL version="1.0.6"
+LABEL version="1.0.7"
 LABEL homepage.group=Minecraft
-LABEL homepage.name="All the Mods 9-1.0.6"
+LABEL homepage.name="All the Mods 9-1.0.7"
 LABEL homepage.icon="https://media.forgecdn.net/avatars/902/338/638350403793040080.png"
 LABEL homepage.widget.type=minecraft
 LABEL homepage.widget.url=udp://All-The-Mods-9:25565
