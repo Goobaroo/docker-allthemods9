@@ -2,7 +2,7 @@
 
 set -x
 
-FORGE_VERSION=1.20.1-47.4.0
+FORGE_VERSION=1.20.1-47.4.9
 MC_VERSION=1.20.1
 cd /data
 
@@ -15,7 +15,7 @@ fi
 
 if ! [[ -f 'Server-Files-1.1.0.zip' ]]; then
 	rm -fr config defaultconfigs kubejs mods packmenu Simple.zip forge*
-	curl -Lo 'Server-Files-1.1.0.zip' 'https://edge.forgecdn.net/files/6985/847/Server-Files-1.1.0.zip' || exit 9
+	curl -Lo 'Server-Files-1.1.0.zip' 'https://www.curseforge.com/api/v1/mods/715572/files/6985843/download' || exit 9
 	unzip -u -o 'Server-Files-1.1.0.zip' -d /data
 	DIR_TEST=$(find . -type d -maxdepth 1 | tail -1 | sed 's/^.\{2\}//g')
 	if [[ $(find . -type d -maxdepth 1 | wc -l) -gt 1 ]]; then
@@ -24,7 +24,7 @@ if ! [[ -f 'Server-Files-1.1.0.zip' ]]; then
 		cd /data
 		rm -fr "$DIR_TEST"
 	fi
-	curl -Lo mohist-${FORGE_VERSION}-installer.jar https://mohistmc.com/api/v2/projects/mohist/${MC_VERSION}/builds/latest/download
+	curl -Lo mohist-${FORGE_VERSION}-installer.jar https://api.mohistmc.com/project/mohist/1.20.1/builds/312/download
  	echo "java -jar mohist-${FORGE_VERSION}-installer.jar" > run.sh
 fi
 
